@@ -13,9 +13,12 @@ const Product = () => {
 
   // // On clicking hello ecommerce home page will be navigaed...
   // const navigate = useNavigate();
-  // const NavigateApi = () => {
-  //   navigate("/api/products");
-  // };
+  const NavigateToFlipkart = (item) => {
+    const baseURL = "https://www.flipkart.com/search?q="; // Flipkart search URL
+    const encodedItem = encodeURIComponent(item); // Encode item to make it URL-safe
+    const targetURL = `${baseURL}${encodedItem}`;
+    window.open(targetURL, "_blank"); // Open the URL in a new tab
+  };
 
   return (
     <div className="product">
@@ -43,7 +46,7 @@ const Product = () => {
                 onMouseOut={(e) =>
                   (e.target.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)")
                 } // Revert shadow on mouse out
-                // onClick={NavigateApi}
+                onClick={() => NavigateToFlipkart(card.Item)}
               />
 
               <div className="card-info">

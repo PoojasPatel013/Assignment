@@ -14,9 +14,9 @@ const Header = () => {
       <div className="container header-content">
         <div className="logo">hElLo EcOmMeRcE</div>
         <nav>
-          <Link className="centerLink" to="/">Home</Link>
-          <Link className="centerLink" to="/products">Products</Link>
-          <Link className="centerLink" to="/cart">Cart</Link>
+          <Link to="/">Home</Link>
+          <Link to="/products">Products</Link>
+          <Link to="/cart">Cart</Link>
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
         </nav>
