@@ -1,0 +1,235 @@
+.home {
+  padding: 4rem 0;
+}
+
+.welcomeSection p {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--gradient);
+  border-radius: 2px;
+}
+
+.cta-section {
+  text-align: center;
+  margin: 4rem 0;
+  background: var(--cta-background);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.cta-section h2 {
+  color: var(--cta-heading-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: var(--cta-text-color);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: var(--cta-button-color);
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--cta-button-hover-color);
+}
+
+.testimonial-section {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background-color: var(--testimonial-card-background);
+  padding: 2rem;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card span {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.card {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.card h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.about-us {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.about-us h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+
+.jeanWaalaSection {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 2rem 1rem;
+  overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.jeanWaalaSection h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.jeanWaalaSection .cards {
+  display: flex;
+  gap: 1.5rem; /* Space between cards */
+  justify-content: center; /* Center cards in the container */
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: nowrap; /* Ensure all cards are in one row */
+  overflow-x: auto; /* Add scrolling for smaller screens */
+  padding-bottom: 1rem; /* Space at the bottom for scroll visibility */
+}
+
+.jeanWaalaSection .card {
+  min-width: 280px; /* Set a fixed minimum width for each card */
+  flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+  background-color: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.jeanWaalaSection .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.jeanWaalaSection .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.jeanWaalaSection .card h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.jeanWaalaSection .card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}

@@ -1,0 +1,28 @@
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 250px; /* Optional: Adjust width for balance */
+  height: 350px; /* Increase the height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  max-height: 180px; /* Ensure the image fits well within the card */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image scales nicely */
+  margin-bottom: 10px; /* Space between the image and text */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Optional: Add a hover effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
