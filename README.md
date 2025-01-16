@@ -107,12 +107,13 @@ ThreadSync
 
 
 
+
+```
 ## Contributions
 
 Contributions are welcome! Please fork the repository and submit a pull request for any feature requests or bug fixes.
 
----
-```
+
 
 ## Contact
 
