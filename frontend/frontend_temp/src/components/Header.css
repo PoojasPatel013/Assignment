@@ -1,6 +1,6 @@
 .header {
   background: var(--gradient);
-  padding: 1.25rem 0;
+  /* padding: 1.25rem 0; */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -23,6 +23,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
@@ -55,3 +63,11 @@ nav a:hover::after {
 }
 
 
+
+
+.imageLuxy {
+  height: 80px;
+  width: 80px;
+  margin: 11px;  
+  /* border-radius: 50%; */
+}

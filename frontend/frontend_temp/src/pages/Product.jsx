@@ -6,7 +6,7 @@ const Product = () => {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8001/api/product")
+    fetch("http://localhost:8001/api/products")
       .then((rawData) => rawData.json())
       .then((res) => setCards(res));
   }, []);

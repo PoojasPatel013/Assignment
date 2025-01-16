@@ -6,11 +6,15 @@ const MONGO_URI = "mongodb://127.0.0.1:27017/websiteNew";
 const jwt = require("jsonwebtoken");
 const JWT_SECRET = "234567asdfgyu!@$%^YGF";
 const bcrypt = require("bcrypt");
+const path = require('path');
 const PORT = 8001;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 // app.use()
 mongoose
   .connect(MONGO_URI)
@@ -40,27 +44,17 @@ const productSchema = new mongoose.Schema({
 
 const product = mongoose.model("products", productSchema);
 
-// const authToken = (req, res, next) => {
-//     const token = req.headers["authorization"]?.replace("Bearer ", "")
-//     if (!token) {
-//         res.status(401).json({ message: "token not found" })
-//     }
-//     try {
-//         const decoded = jwt.verify(token, JWT_SECRET)
-//         req.user = decoded;
-//         next();
-//     } catch {
-//         res.status(401).json({ message: "Error fetching token" })
-//     }
-
-// }
 
 app.get("/", async (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'alpha.html'));
+})
+
+app.get("/api/users", async (req, res) => {
   const userData = await user.find();
   res.json(userData);
 });
 
-app.get("/api/product", async (req, res) => {
+app.get("/api/products", async (req, res) => {
   const productData = await product.find();
   // console.log(productData); // Debug here
   res.json(productData);
@@ -86,7 +80,7 @@ app.post("/user/register", async (req, res) => {
     });
     // console.log(newUser);
     await newUser.save();
-    
+
     res.status(201).json({ message: "Successfully registered!" });
   } catch (err) {
     res.status(500).json({ message: "Error encountered." });

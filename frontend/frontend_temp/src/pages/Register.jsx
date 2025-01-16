@@ -27,8 +27,8 @@ const Register = () => {
       }),
     });
     if (response.ok) {
-      alert("Success\nYou will be redirecting to home page...");
-      navigate("/");
+      alert("Success\nYou will be redirecting to login page...");
+      navigate("/login");
     } else {
       alert("Failed");
     }
